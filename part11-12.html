@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style11-12.css">
+</head>
+
+<body>
+  <section>
+    <h3> Пример 11</h3>
+    <p> Указанный код выберет все ссылки, указывающие на http://net.tutsplus.com. Они окрасятся в красный цвет.
+      Стиль остальных ссылок останется без изменений.</p>
+    <pre>
+    a[href="http://net.tutsplus.com"] 
+    {
+      color: #ff2400 ;
+    }</pre>
+    <p> <a href="http://net.tutsplus.com">Несколько</a> ссылок на <a href="http://net.tutsplus.com">тот сайт</a>, а
+      здесь ссылка на <a href="https://www.instagram.com">инстаграм</a>.</p>
+  </section>
+  <section>
+    <h3>Пример 12</h3>
+    <p> Предыдущий пример слишком строгий. Если ссылка указывает Nettuts+, но путь прописан как nettuts.com? В этом
+      случае мы можем использовать синтаксис регулярных выражений.</p>
+    <pre>
+      a[href*="tuts"] {
+        color: #1f6053;
+        }
+    </pre>
+    <p> Вот то, что нам нужно. Звёздочка означает, что указанное значение должно быть частью указанного атрибута.
+      Поэтому этот селектор выберет и nettuts.com, и net.tutsplus.com,, и даже tutsplus.com.
+      Но помните, что этот способ слишком обширен. Что, если у вас будет ссылка, не указывающая на tuts+, но имеющая в
+      адресе слово tuts? Для составления более строго правила используйте ^ и $, указывающие на начало и конец строки
+      соответственно.</p>
+  </section>
+</body>
+</html>
