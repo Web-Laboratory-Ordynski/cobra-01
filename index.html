@@ -208,6 +208,46 @@
 		</form>
 		</p>
 	</div>
+	<h1>X[href^="http"]</h1>
+	<style>
+		.text {
+			text-align: center;
+		}
+	</style>
+
+	<pre style="color:red" class="text">a[href^="http"] {
+		background: url(path/to/external/icon.png) no-repeat;
+		padding-left: 10px;
+	   }</pre>
+	<pre>
+		Иконка напоминает, что это внешняя ссылка, которая переведёт вас на другой сайт.
+		Это как раз случай использования символа ^.
+		В регулярных выражениях он используется для указания начала строки. 
+		Если мы хотим выбрать все ссылки, начинающиеся с http, то мы можем использовать код из примера сверху.</pre>
+	<h2>Совместимость</h2>
+	<ul>
+		<li>IE7+</li>
+		<li>?Firefox</li>
+		<li>Chrome</li>
+		<li>Safari</li>
+		<li>Opera</li>
+	</ul>
+	<h1>X[href$=".jpg"]</h1>>
+	<pre style="color:red" class="text">a[href$=".jpg"] {
+		color: red;
+	   }
+	</pre>>
+	<pre>Мы используем символ из регулярных выражений $, который указывает на конец строки. 
+	В этом случае мы ищем все ссылки на фото, т.е. путь в них должен заканчиваться на .jpg. 
+	Учтите, что это не сработает для файлов gif и png.</pre>
+	<h2>Совместимость</h2>
+	<ul>
+		<li>IE7+</li>
+		<li>?Firefox</li>
+		<li>Chrome</li>
+		<li>Safari</li>
+		<li>Opera</li>
+	</ul>
 </body>
 
 </html>
