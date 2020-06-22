@@ -1,16 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title></title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[href="http://net.tutsplus.com"] {
+            color: #ff2400;
+        }
+    </style>
+</head>
 
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="images/favicon.png" />
-  </head>
+<body>
+    <section class="section-15">
+        <h2>X[data-*="foo"]</h2>
+        <h3>CSS</h3>
+        <p class="descr">Выбирает элементы с определенным атрибутом</p>
+        <div class="css-code">
+            <pre>
+                a[data-filetype="image"] {
+                    color: red;
+                   }
+            </pre>
+        </div>
+        <h3>HTML</h3>
+        <div class="html-code">
+            <pre>
+                &lt;a href="path/to/image.jpg" data-filetype="image"&gt; Image Link &lt;/a&gt;
+            </pre>
+        </div>
+        <div class="example">
+            <style>
+                a[data-filetype="image"] {
+                    color: red;
+                }
+            </style>
+            <div class="example__html">
+                <a href="#" data-filetype="image"> Image Link </a>
+            </div>
 
-  <body>
-  </body>
+        </div>
+    </section>
+    <section class="section-16">X[foo~="bar"]
+        <h2>X[foo~="bar"]</h2>
+
+        <h3>CSS</h3>
+        <p class="descr">Символ тильда (~) позволяет выбрать атрибут, в котором есть значения, разделённые пробелом.</p>
+        <div class="css-code">
+            <pre>
+                a[data-info~="external"] {
+                    color: red;
+                   }
+                    
+                   a[data-info~="image"] {
+                    border: 1px solid black;
+                   }
+            </pre>
+        </div>
+        <h3>HTML</h3>
+        <div class="html-code">
+            <pre>
+                &lt;a&gt; href="#" data-info="external image"&gt; Нажми на меня, дурашка &lt;/a&gt;
+            </pre>
+        </div>
+        <div class="example">
+            <style>
+                a[data-info~="external"] {
+                    color: red;
+                }
+
+                a[data-info~="image"] {
+                    border: 1px solid black;
+                }
+            </style>
+            <div class="example__html">
+                <a href="#" data-info="external image"> Нажми на меня, дурашка </a>
+            </div>
+
+        </div>
+    </section>
+    <section class="section-17">
+        <h2>X:checked</h2>
+        <h3>CSS</h3>
+        <p class="descr">Данный псевдокласс выберет только отмеченные элементы пользовательского интерфейса: радиокнопки
+            или чекбоксы. </p>
+        <div class="css-code">
+            <pre>
+                input[type=radio]:checked {
+                    border: 1px solid black;
+                   }
+            </pre>
+        </div>
+        <h3>HTML</h3>
+        <div class="html-code">
+            <pre>
+                &lt;form &gt;
+                    &lt;p&gt;&lt;b&gt;Какое у вас состояние разума?&lt;/b&gt;&lt;/p&gt;
+                     &lt;p&gt;&lt;input name="dzen" type="radio" value="nedzen"&gt;&lt;label for="dzen"&gt; Не дзен&lt;/label&gt; &lt;/p&gt;
+                     &lt;p&gt;&lt;input name="dzen" type="radio" value="dzen"&gt; &lt;label for="dzen"&gt; Дзен&lt;/label&gt; Дзен&lt;/p&gt;
+                     &lt;p&gt;&lt;input name="dzen" type="radio" value="pdzen" checked&gt; &lt;label for="dzen"&gt;Полный дзен&lt;/label&gt; &lt;/p&gt;
+                     
+                   &lt;/form&gt;
+            </pre>
+        </div>
+        <div class="example">
+            <style>
+                input[type=radio]:checked+label {
+                    color: green;
+                }
+            </style>
+            <div class="example__html">
+                <form>
+                    <p><b>Какое у вас состояние разума?</b></p>
+                    <p><input name="dzen" type="radio" value="nedzen"><label for="dzen"> Не дзен</label> </p>
+                    <p><input name="dzen" type="radio" value="dzen"> <label for="dzen"> Дзен</label> Дзен</p>
+                    <p><input name="dzen" type="radio" value="pdzen" checked> <label for="dzen">Полный дзен</label> </p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <h3> Пример 11</h3>
+        <p> Указанный код выберет все ссылки, указывающие на http://net.tutsplus.com. Они окрасятся в красный цвет.
+            Стиль остальных ссылок останется без изменений.</p>
+        <pre>
+        a[href="http://net.tutsplus.com"] 
+        {
+          color: #ff2400 ;
+        }</pre>
+        <p> <a href="http://net.tutsplus.com">Несколько</a> ссылок на <a href="http://net.tutsplus.com">тот сайт</a>, а
+            здесь ссылка на <a href="https://www.instagram.com">инстаграм</a>.</p>
+    </section>
+    <section>
+        <h3>Пример 12</h3>
+        <p> Предыдущий пример слишком строгий. Если ссылка указывает Nettuts+, но путь прописан как nettuts.com? В этом
+            случае мы можем использовать синтаксис регулярных выражений.</p>
+        <pre>
+          a[href*="tuts"] {
+            color: #1f6053;
+            }
+        </pre>
+        <p> Вот то, что нам нужно. Звёздочка означает, что указанное значение должно быть частью указанного атрибута.
+            Поэтому этот селектор выберет и nettuts.com, и net.tutsplus.com,, и даже tutsplus.com.
+            Но помните, что этот способ слишком обширен. Что, если у вас будет ссылка, не указывающая на tuts+, но
+            имеющая в
+            адресе слово tuts? Для составления более строго правила используйте ^ и $, указывающие на начало и конец
+            строки
+            соответственно.</p>
+    </section>
+</body>
+
 </html>
