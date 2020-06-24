@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box0;
+}
+@font-face {
+  font-family: iconfont; /* Гарнитура шрифта */
+  src: url(./fonts/icofont/icofont.woff2); /* Путь к файлу со шрифтом */
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  padding: 0 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.shoping__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  & [type="checkbox"] {
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    margin-right: 10px;
+    &:checked + span {
+      text-decoration: line-through;
+      color: #a3a0b5;
+      & .ba-description {
+        color: inherit;
+      }
+    }
+  }
+  li {
+    background: #7a7593;
+    border: 0 solid #fff;
+    transition: all 0.5s;
+    &:nth-child(odd) {
+      background: #88839e;
+    }
+    &:hover {
+      background: #706b87;
+    //   border-width: 4px 0;
+      outline: 4px solid #ffffff;
+      outline-offset: -4px;
+    }
+    &:active {
+      background: #e76365;
+    // background: transparent;
+    }
+  }
+  label {
+    display: block;
+    cursor: pointer;
+    padding: 15px;
+  }
+  .descr {
+    font-size: 80%;
+    color: #cdcbd6;
+    vertical-align: middle;
+    &:before {
+      content: " (";
+    }
+    &:after {
+      content: ")";
+    }
+  }
+}
+
+
