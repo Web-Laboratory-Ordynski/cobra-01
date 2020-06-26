@@ -7,5 +7,8 @@
                     
 Имя | Никнейм | Почта
 ------------- | -------------  | -------------
-Анастасия Берлюта  | utromzlaya | a.berlyuta@gmail.com
-
+Anastasiia Berliuta  | utromzlaya | a.berlyuta@gmail.com
+Vladyslav Chetverikov| vladFour | vlad19941104@gmail.com
+Denis Shevchenko |ShevchenkoDen | 
+ | hannabanana3 | 
+ | Kostyantyn2012 | 
