@@ -1,0 +1,23 @@
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.image {
+    margin: 0 17px 85px 17px;
+}
+body { 
+    background-color:  rgb(18, 17, 22);
+    color: rgb(255,255,255);
+    text-align: center;
+}
+.colortext {
+    color: rgb(0,199,252);
+}
+.spacetext {
+    margin: 60px 0 0 0;
+}
+.logospace {
+    margin: 120px 0 0 0;
+}
