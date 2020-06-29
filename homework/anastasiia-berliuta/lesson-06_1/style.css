@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    margin: 55px 120px 120px;
+}
+div{
+    display: inline-block;
+    width: 250px;
+    height: 180px;
+    padding: 50px;
+}
+p:nth-of-type(2) {
+    opacity: 0.5;
+}
+/*span {
+    border: 2px solid #2a69a6; 
+    border-radius: 100px;
+    padding: 32px 20px 10px 20px;
+    color: #2a69a6;
+}*/
