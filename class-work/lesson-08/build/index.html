@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 08</title>
+  <link rel="stylesheet" href="/css/libs.min.css">
+  <link rel="stylesheet" href="/css/style.min.css">
+</head>
+
+<body>
+  <section class="kostya">
+    <div class="container">
+      <h2>position: static|relative;</h2>
+      <div class="descr">
+        <p>Свойство <code>position</code> позволяет сдвигать элемент со своего обычного места.</p>
+        <dl>
+          <dt><code>static</code></dt>
+          <dd>Иначе называется «без позиционирования». В явном виде задаётся только если надо переопределить другое
+            правило CSS.</dd>
+          <dt><code>relative</code></dt>
+          <dd>Сдвигает элемент относительно текущего места.</dd>
+        </dl>
+        <ul>
+          <li>Противоположные границы left/right (top/bottom) одновременно указать нельзя.
+          </li>
+          <li>Окружающие элементы ведут себя так, как будто элемент не сдвигался.</li>
+        </ul>
+      </div>
+
+
+      <h2 class="main__header-title">float: left | right | none | inherit;</h2>
+      <div class="descr">Свойство <code>float</code> в CSS занимает особенное место. До его появления расположить два блока один слева от
+        другого можно было лишь при помощи таблиц. Но в его работе есть ряд особенностей. Поэтому его иногда не любят, но
+        при их понимании <code>float</code> станет вашим верным другом и помощником.</div>
+        <p>При применении этого свойства происходит следующее:</p>
+        <ol>
+          <li>Элемент позиционируется как обычно, а затем <em>вынимается из <strike>документа</strike> потока</em> и сдвигается влево (для <code>left</code>) или вправо (для <code>right</code>) до того как коснётся либо границы родителя, либо другого элемента с <code>float</code>.</li>
+          <li>Если пространства по горизонтали не хватает для того, чтобы вместить элемент, то он сдвигается вниз до тех пор, пока не начнёт помещаться.</li>
+          <li>Другие непозиционированные блочные элементы без <code>float</code> ведут себя так, как будто элемента с <code>float</code> нет, так как он убран из потока.</li>
+          <li>Строки (inline-элементы), напротив, «знают» о <code>float</code> и обтекают элемент по сторонам.</li>
+          </ol>
+    </div>
+
+  </section>
+</body>
+
+</html>
