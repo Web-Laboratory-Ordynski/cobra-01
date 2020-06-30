@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box0;
+}
+@font-face {
+  font-family: iconfont; /* Гарнитура шрифта */
+  src: url(./fonts/icofont/icofont.woff2); /* Путь к файлу со шрифтом */
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  padding: 0 15px;
+  max-width: 942px;
+  margin: 0 auto;
+}
+.who {
+  text-align: center;
+  text-transform: uppercase;
+  color: #958089;
+
+  &__top-title {
+    font-size: 12px;
+    margin-top: 143px;
+    margin-bottom: 35px;
+  }
+  &__title {
+    font-size: 48px;
+    color: #27b4b6;
+    margin-bottom: 44px;
+  }
+  &__sub-title {
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -1.9px;
+    word-spacing: -0.8px;
+    text-align: justify;
+    max-width: 513px;
+    margin: 0 auto;
+  }
+}
+.about {
+  background-color: #f7f7f7;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: #1b1b1b;
+    width: 25%;
+    transition: all 0.5s;
+    padding: 0 32px;
+    text-align: center;
+    &:hover {
+      background-color: #0ec8cb;
+      color: #ffffff;
+    }
+
+    &-ico {
+      width: 65px;
+      height: 63px;
+      margin: 55px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-family: icofonts, "Comic Sans MS", cursive;
+        font-size: 65px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 33px;
+      font-size: 21px;
+      font-weight: bold;
+      text-transform: uppercase;
+      
+    }
+    &-descr {
+      margin-bottom: 94px;
+    }
+  }
+}
