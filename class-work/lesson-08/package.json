@@ -1,0 +1,54 @@
+{
+  "name": "Startpack_Gulp4",
+  "version": "1.0.0",
+  "description": "HTML5+CSS3 template for easy start website project'",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@popperjs/core": "^2.0.6",
+    "bootstrap": "^4.4.1",
+    "decompress": "^4.2.1",
+    "http-proxy": "^1.18.1",
+    "owl.carousel": "^2.3.4",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-favicons": "^2.3.1",
+    "gulp-file-include": "^2.1.0",
+    "gulp-html-import": "0.0.2",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-purgecss": "^2.0.6",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1",
+    "purgecss": "^2.0.6",
+    "sass": "^1.23.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/budfy/Startpack_Gulp4.git"
+  },
+  "author": "Roman Serdyuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/budfy/Startpack_Gulp4/issues"
+  },
+  "homepage": "https://github.com/budfy/Startpack_Gulp4#readme"
+}
