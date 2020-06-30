@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+    margin: 55px 120px 120px;
+    background-color: rgb(224, 255, 255);
+}
+div {
+    display: inline-block;
+    width: 250px;
+    height: 180px;
+    padding: 50px;
+}
+p:nth-of-type(2) {
+    opacity: 0.5;
+}
+.picture {
+    position: relative;
+}
+.picture .second {
+    opacity:0;
+    position: absolute;
+    margin: 0px 0 0 -67px;
+    border-radius: 100px;
+}
+.picture .second:hover{
+    opacity:1;
+    position: absolute;
+    margin: 0px 0 0 -67px;
+    border-radius: 100px;
+    background-color: #2a69a6;
+    border: 2px solid #2a69a6;
+}
+.picture .first:hover{
+    opacity:0;
+}
+

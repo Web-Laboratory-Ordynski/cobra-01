@@ -7,4 +7,8 @@
                     
 Имя | Никнейм | Почта
 ------------- | -------------  | -------------
-Имя Фамилия  | Content Cell | Content Cell (изменить)
+Anastasiia Berliuta  | utromzlaya | a.berlyuta@gmail.com
+Vladyslav Chetverikov| vladFour | vlad19941104@gmail.com
+Denis Shevchenko |ShevchenkoDen | 
+ | hannabanana3 | 
+ Kostyantyn Gamanyuk| Kostyantyn2012 | k.gamanyuk@gmail.com
