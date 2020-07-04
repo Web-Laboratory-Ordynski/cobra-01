@@ -1,0 +1,128 @@
+body {
+    background-color: #b07cf7;
+}
+.blog {
+    width: 190px;
+    height: 86px;
+    position: relative;
+    top: 100px;
+    left: 42%;
+}
+.text {
+    width: 563px;
+    height: 66px;
+    position: relative;
+    top: 110px;
+    left: 28%;
+    font-family: "Raleway";
+    color: white;
+    text-align: center;
+}
+main {
+    position: relative;
+    top: -50px;
+}
+main div {
+    display: inline-block;
+}
+.firstblog {
+    position: relative;
+    top: 150px;
+    left: 5%;
+    width: 371px;
+    height: 311px;
+}
+.secondblog {
+    position: relative;
+    top: 150px;
+    left: 7.5%;
+    width: 371px;
+    height: 311px;
+}
+.thirdblog {
+    position: relative;
+    top: 216px;
+    left: 10%;
+    width: 371px;
+    height: 311px;
+}
+.size {
+    width: 371px;
+    height: 311px;
+}
+footer {
+    position: relative;
+    top: 100px;
+    padding-bottom: 10%;
+}
+.viewbg {
+    position: absolute;
+    left: 42%;
+    z-index: 0;
+}
+.view {
+    position: relative;
+    top: 20px;
+    left: 45.2%;
+    z-index: 1;
+}
+.viewbg:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 2px #910517;
+}
+.title {
+    position: relative;
+    z-index: 3;
+    left: 10px;
+    top: -90px;
+}
+.smallbg1 {
+    position: relative;
+    z-index: 3;
+    top: -285px;
+    left: -270px;
+}
+.day {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+}
+.nov {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.smallbg2 {
+    position: relative;
+    z-index: 3;
+    top: -285px;
+    left: -260px;
+}
+.smallbg3 {
+    position: relative;
+    z-index: 3;
+    top: -350px;
+    left: 30px;
+}
+.bg {
+    background: linear-gradient(to top, black 40%, transparent 100%);
+    width: 371px;
+    height: 311px;
+    opacity: 0.7;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.bg:hover {
+    background: linear-gradient(to top, black 0%, transparent 50%);
+    opacity: 0.7;
+    box-shadow: 10px 10px 5px black;
+}
+img[src$=".svg"] {
+    opacity: 0.7;
+   }
+@font-face {
+    font-family: "Raleway";  
+    src: url("Raleway-Light.ttf") format("truetype");
+} 
