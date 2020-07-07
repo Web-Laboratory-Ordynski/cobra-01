@@ -45,8 +45,16 @@ body {
     font-size: 26px;
     color: #ffffff;
     width: 25%;
-    // outline: 3px solid #ffffff;
-    // outline-offset: -3px;
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.3s;
+
+    &:hover{
+      opacity: 1;
+      transform: scale(1.2);
+      z-index: 10;
+    }
+
     &:first-child {
       width: 50%;
     }

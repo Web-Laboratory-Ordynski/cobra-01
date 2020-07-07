@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after {
+  outline: solid 1px red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: iconfont; /* Гарнитура шрифта */
+  src: url(./fonts/icofont/fonts/icofont.woff2); /* Путь к файлу со шрифтом */
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  // background-color: #b07cf7;
+}
+.container {
+  padding: 0;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.who-we-are {
+  color: #3C3C3C;
+  padding-bottom: 161px;
+
+  &__title {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 56px;
+  }
+
+  &__description {
+    max-width: 563px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 46px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 72px;
+  }
+
+  &__item {
+    width: 25%;
+ margin: 0 15px;
+    transition: all 0.3s;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__img {
+    position: relative;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      height: auto;
+      // transition: all 0.7s;
+    }
+    &:hover .who-we-are__hover {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__hover {
+    background-color: #18b5dc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.7s;
+    &-inner {
+      position: relative;
+      height: 100%;
+    }
+    &-social {
+      position: absolute;
+      top: 50%;
+      margin-top: -0.625em;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      a {
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+        margin: 0 3px;
+        background-color: #5ECBE7;
+        padding: 10px;
+      }
+    }
+    transition: all 0.7s;
+  }
+&__person {
+  color: #282528;
+  &-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+}
