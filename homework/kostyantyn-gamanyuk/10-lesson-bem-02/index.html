@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM-02</title>
+    <link rel="stylesheet" href="/css/libs.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+
+</head>
+
+<body>
+    <section class="product section">
+        <div class="container">
+            <div class="product__card">
+                <div class="product__head">
+                    <img src="img/logo.png" alt="" class="product__logo">
+                </div>
+                <div class="product__content">
+                    <div class="images">
+                        <img src="img/Nike-SB-Stefan-Janoski-Max.png" alt="" class="images__img">
+                        <div class="images__bullet">
+                            <ul class="images-dots">
+                                <li class="images-dots__item">
+                                    <button class="images-dots__button images-dots__button--active grey"
+                                        type="button"></button>
+                                </li>
+                                <li class="images-dots__item ">
+                                    <button class="images-dots__button white" type="button"></button>
+                                </li>
+                                <li class="images-dots__item ">
+                                    <button class="images-dots__button red" type="button"></button>
+                                </li>
+                                <li class="images-dots__item ">
+                                    <button class="images-dots__button aqua" type="button"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <div class="product__title">Nike SB Stefan <br>Janoski Max</div>
+                        <div class="product__descr">Unisex Skateboarding Shoe (Men's Sizing)</div>
+                        <div class="product__rating">
+                            <div class="rating">
+                                <span class="rating__item rating__item--active"></span>
+                                <span class="rating__item rating__item--active"></span>
+                                <span class="rating__item rating__item--active"></span>
+                                <span class="rating__item"></span>
+                                <span class="rating__item"></span>
+                            </div>
+                        </div>
+                        <div class="product__option">
+                            <div class="product__option-item">
+                                <select class="product__option-select" name="size">
+                                    <option selected disabled>Size</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                </select>
+                            </div>
+                            <div class="product__option-item">
+                                <select class="product__option-select" name="qty">
+                                    <option selected disabled>Qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="product__add-to-cart">
+                            <a href="#" class="button">Add to cart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
