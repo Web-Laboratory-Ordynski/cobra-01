@@ -11,35 +11,35 @@
 </head>
 
 <body>
-    <section class="product section">
-        <div class="container">
-            <div class="product__card">
+    <section class="catalog">
+        <div class="container section">
+            <div class="product">
                 <div class="product__head">
                     <img src="img/logo.png" alt="" class="product__logo">
                 </div>
                 <div class="product__content">
-                    <div class="images">
+                    <div class="product__images images">
                         <img src="img/Nike-SB-Stefan-Janoski-Max.png" alt="" class="images__img">
                         <div class="images__bullet">
                             <ul class="images-dots">
                                 <li class="images-dots__item">
-                                    <button class="images-dots__button images-dots__button--active grey"
+                                    <button class="images-dots__button images-dots__button--active images-dots__button--grey"
                                         type="button"></button>
                                 </li>
                                 <li class="images-dots__item ">
-                                    <button class="images-dots__button white" type="button"></button>
+                                    <button class="images-dots__button images-dots__button--white" type="button"></button>
                                 </li>
                                 <li class="images-dots__item ">
-                                    <button class="images-dots__button red" type="button"></button>
+                                    <button class="images-dots__button images-dots__button--red" type="button"></button>
                                 </li>
                                 <li class="images-dots__item ">
-                                    <button class="images-dots__button aqua" type="button"></button>
+                                    <button class="images-dots__button images-dots__button--aqua" type="button"></button>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="product__title">Nike SB Stefan <br>Janoski Max</div>
+                    <div class="product__description">
+                        <div class="product__title">Nike SB Stefan Janoski Max</div>
                         <div class="product__descr">Unisex Skateboarding Shoe (Men's Sizing)</div>
                         <div class="product__rating">
                             <div class="rating">
@@ -52,19 +52,19 @@
                         </div>
                         <div class="product__option">
                             <div class="product__option-item">
-                                <select class="product__option-select" name="size">
-                                    <option selected disabled>Size</option>
-                                    <option value="37">37</option>
-                                    <option value="38">38</option>
-                                    <option value="39">39</option>
+                                <select class="options-select" name="size">
+                                    <option class="option-select__option" selected disabled>Size</option>
+                                    <option class="option-select__option" value="37">37</option>
+                                    <option class="option-select__option" value="38">38</option>
+                                    <option class="option-select__option" value="39">39</option>
                                 </select>
                             </div>
                             <div class="product__option-item">
-                                <select class="product__option-select" name="qty">
-                                    <option selected disabled>Qty</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
+                                <select class="options-select" name="qty">
+                                    <option class="option-select__option" selected disabled>Qty</option>
+                                    <option class="option-select__option" value="1">1</option>
+                                    <option class="option-select__option" value="2">2</option>
+                                    <option class="option-select__option" value="3">3</option>
                                 </select>
                             </div>
                         </div>
@@ -75,6 +75,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 </body>
 
