@@ -1,0 +1,91 @@
+// *,
+// *:before,
+// *:after {
+//   outline: solid 1px red;
+// }
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Proxima-Nova/proxima_nova_regular-webfont.woff ") format("woff"),
+         url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+ }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  color: #171717;
+  background-color: #464f53;
+}
+.container {
+  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.post-edit {
+  &__tools {
+    text-align: right;
+  }
+  &__tools-control {
+    .control {
+      background-color: #fabe2d;
+    }
+  }
+  .control {
+    text-align: right;
+    display: flex;
+  }
+
+  &__inner {
+    // margin-top: 128px;
+    // margin-bottom: 128px;
+    // padding: 141px 100px 0;
+    background: white;
+    box-shadow: 0 0 55px silver;
+    // height: 800px;
+    position: relative;
+  }
+&__tools {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+  &__content-author {
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #b4b4b4;
+    font-family: "Proxima Nova";
+  }
+  h1 {
+    font-size: 78px;
+    letter-spacing: 4px;
+    line-height: 74px;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    font-family: "Futura PT";
+    font-family: "Proxima Nova";
+  }
+  &__sub-title {
+    font-size: 30px;
+    line-height: 62px;
+    color: #8f8f8f;
+    font-style: italic;
+    font-family: "Georgia";
+    text-align: left;
+  }
+
+  &__content {
+    font-size: 27px;
+    line-height: 40px;
+    color: #000000;
+    font-family: "Georgia";
+    text-align: left;
+    border-left: 1px solid #e8ebec;
+    padding-left: 60px;
+    padding-right: 130px;
+    margin-left: 60px;
+    margin-top: 100px;
+  }
+}
