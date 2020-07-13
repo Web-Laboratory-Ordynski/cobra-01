@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #e2e7ec;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0 48px;
+}
+
+.load {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.load__img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.load__text {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #8996a3;
+  text-transform: uppercase;
+}
+
+.post__items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-inline-start: 0px;
+}
+
+.post__item {
+  position: relative;
+  flex-grow: 1;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+.post__item + .post__item {
+  margin-left: 20px;
+}
+.post__item:nth-child(3) {
+  margin-left: 0;
+}
+.post__item--first {
+  flex-grow: 2;
+}
+.post__item--first .post__img {
+  position: relative;
+  max-width: 740px;
+}
+.post__item--first .post__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 44px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(25, 25, 27, 0.5) 100%
+  );
+}
+.post__item--first .post__text {
+  position: absolute;
+  bottom: 40px;
+}
+.post__item--first .post__date {
+  margin-bottom: 28px;
+  margin-top: 0;
+}
+.post__item--first .post__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.post__item--first .post__author {
+  display: none;
+}
+
+.post__img {
+  display: block;
+  max-width: 360px;
+}
+
+.post__content {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 27px;
+}
+
+.post__date {
+  font-size: 13px;
+  margin-top: 30px;
+  margin-bottom: 22px;
+}
+
+.post__title {
+  font-size: 22px;
+  margin-bottom: 100px;
+}
+
+.post__author {
+  position: absolute;
+  bottom: 27px;
+  max-width: 54px;
+}
