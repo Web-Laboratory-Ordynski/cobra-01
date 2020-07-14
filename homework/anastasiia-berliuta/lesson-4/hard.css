@@ -1,0 +1,54 @@
+#images {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+.menu {
+    width: 170px;
+    height: 120px;
+}
+#context {
+    display: flex;
+}
+article {
+    text-align: left;
+    max-width: 900px;
+    color: rgb(251,240,206);
+}
+body {
+    background-color: rgb(153,9,9);
+    font-size: 18px;
+}
+footer {
+    background-color: rgb(233,91,17);
+    color: rgb(251,240,206);
+    font-size: 20px;
+}
+li {
+    list-style-type: none;
+}
+ul {
+    margin-left: 0em;
+    padding-left: 0em;
+    background-color: rgb(125,9,9);
+    width: 250px;
+}
+aside {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(227,221,223);
+}
+header, footer {
+    text-align: center;
+}
+a {
+    color: rgb(229,88,16);
+}
+.asidetitle {
+    background-color: rgb(189,189,189);
+}
+hr {
+    max-width: 130px;
+}

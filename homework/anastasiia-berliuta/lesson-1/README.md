@@ -1,1 +1,1 @@
-# templete-home-work
+# Урок 5. Photoshop для Front-End розробника
