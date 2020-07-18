@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    margin: 50px 203px 60px 203px;
+    text-align: center;
+}
+.headertext {
+    font-style: normal;
+    color: #898f99;
+    font-size: 10px;
+}
+h1 {
+    color: #27b4b6;
+    font-size: 40px;
+}
+h2 {
+    font-family: "PTSans";
+    text-decoration: none;
+    color: #adadad;
+    font-size: 15px;
+}
+ main {
+    text-align: center;
+    font-size: 0;
+} 
+div {
+    display: inline-block;
+    width: 240px;
+    height: 420px;
+    background-color: #f7f7f7; 
+}
+div p {
+    text-align: justify;
+    text-align-last: center;
+    max-width: 190px;
+    margin: 0 -10px 0 25px;
+} 
+div h2 {
+    color: black;
+}
+p {
+    font-family: "PTSans";
+    font-size: 13px;
+}
+.bw {
+    filter: invert(0.86);
+}
+div:hover {
+    filter:invert(1);
+    background-color: rgb(216,75,73);
+}
+img {
+    margin: 55px 0 0 0;
+    width: 66px;
+    height: 64px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: "MontserratRegular";  
+    src: url("fonts/MontserratSubrayada-Regular.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "MontserratBold";  
+    src: url("fonts/MontserratSubrayada-Bold.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "PTSans";  
+    src: url("fonts/PTSans-Regular.ttf") format("truetype"); 
+}
