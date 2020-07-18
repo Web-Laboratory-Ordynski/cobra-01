@@ -1,0 +1,113 @@
+header {
+    margin-top: 110px;
+}
+hr {
+    width: 46px;
+    height: 2px;
+    background-color: #dddbdb;
+}
+.who{
+    font-family: "Lato-Bold";
+    font-size: 26px;
+    text-align: center;
+    /* margin-bottom: 60px; */
+}
+.text{
+    font-family: "Lato-Light";
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+main{
+    text-align: center;
+}
+div {
+    display: inline-block;
+    position: relative;
+}
+.rollover1 {
+    display: inline-block;
+    background: url(img/hover.png);
+    width: 270px;
+    height: 270px;
+    margin-right: 25px;
+
+}
+/* .rollover1:hover {
+    background: url(img/hover.png); 
+    z-index: 2; 
+} */
+.rollover2 {
+    display: inline-block;
+    background: url(img/2.png);
+    width: 270px;
+    height: 270px;
+    margin-right: 25px;
+}
+.rollover2:hover {
+    background: url(img/hover.png);
+    transition: all .3s ease-in;
+       
+}
+.rollover3 {
+    display: inline-block;
+    background: url(img/3.png);
+    width: 270px;
+    height: 270px;
+    margin-right: 25px;
+}
+.rollover3:hover {
+    background: url(img/hover.png);
+    transition: all .3s ease-in;   
+}
+.rollover4 {
+    display: inline-block;
+    background: url(img/4.png);
+    width: 270px;
+    height: 270px;
+}
+.rollover4:hover {
+    background: url(img/hover.png);
+    transition: all .3s ease-in;   
+}
+
+.backs {
+    position: absolute;
+    top: 113px;
+    left: 66px;
+}
+.icons {
+    position: absolute;
+    width: 137px;
+    z-index: 4; 
+    height: 47px;
+    top: 120px;
+    left: 67px;
+}
+.icon {
+    margin-right: 25px;
+}
+.icon:last-child {
+    margin-right: 0;
+    margin-left: 5px;
+}
+.name {
+    position: absolute;
+    bottom: -65px;
+    left: 0px;
+    font-size: 15px;
+    font-family: "Lato-Light";
+    text-align: left;   
+}
+
+@font-face {
+    font-family: "Lato-Bold";  
+    src: url("img/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Lato-Light";  
+    src: url("img/Lato-Light.ttf") format("truetype");
+}
+
+
+
