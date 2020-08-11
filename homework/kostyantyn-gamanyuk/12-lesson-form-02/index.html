@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <link rel="stylesheet" href="/css/libs.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="contact section">
+        <div class="container">
+
+            <div class="container__inner">
+                <div class="tabs">
+                    <div class="tab">
+
+                        <input type="radio" id="tab1" name="tab-group" checked>
+                        <label for="tab1" class="tab__title">Sign in</label>
+
+                        <section class="tab__content">
+                            <form class="contact-form">
+
+                                <div class="contact-form__field-wrap">
+                                    <label for="name" class="contact-form__label">Username</label>
+                                    <div class="contact-form__input-wrap">
+                                        <input id="name" class="contact-form__input" type="text" name="name">
+                                    </div>
+
+                                    <!-- <span class="warning">✔</span> -->
+                                </div>
+
+                                <div class="contact-form__field-wrap">
+                                    <label for="password" class="contact-form__label">Password</label>
+                                    <div class="contact-form__input-wrap">
+                                        <input id="password" class="contact-form__input" type="password"
+                                            name="password">
+                                    </div>
+                                </div>
+                                <div class="contact-form__field-wrap">
+                                    <div class="contact-form__input-wrap">
+
+                                        <input type="checkbox" class="custom-checkbox" id="keep-me" name="flag"
+                                            value="1" tabindex="3">
+
+                                        <label for="keep-me">Keep me signed in</label>
+                                    </div>
+                                </div>
+
+                                <div class="sign-in">
+                                    <button class="sign-in__btn">
+                                        <span>Sign in</span>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="register">
+                                <div class="register__link"><a href="#">Forgot password</a></div>
+                                <div class="register__link"><a href="#">Create an account</a></div>
+                            </div>
+                        </section>
+
+                    </div>
+                    <div class="tab">
+                        <input type="radio" id="tab2" name="tab-group">
+                        <label for="tab2" class="tab__title tab__title--last">Join us</label>
+                        <section class="tab__content">
+                            <form class="contact-form">
+
+                                <div class="contact-form__field-wrap" <label for="name" class="tab-title">
+                                    Username</label>
+                                    <div class="contact-form__input-wrap">
+                                        <input id="name" class="contact-form__input" type="text" name="name">
+                                        <!-- <span class="warning">✔</span> -->
+                                    </div>
+                                </div>
+
+                                <div class="contact-form__field-wrap">
+                                    <label for="password" class="contact-form__label">Password</label>
+                                    <div class="contact-form__input-wrap">
+                                        <input id="password" class="contact-form__input" type="password"
+                                            name="password">
+                                    </div>
+                                </div>
+                                <div class="contact-form__field-wrap">
+                                    <label for="password" class="contact-form__label">Password</label>
+                                    <div class="contact-form__input-wrap">
+                                        <input id="password" class="contact-form__input" type="password"
+                                            name="password">
+                                    </div>
+                                </div>
+
+                                <div class="sign-in sign-in--last">
+                                    <button class="sign-in__btn">
+                                        <span>Join in</span>
+                                    </button>
+                                </div>
+                            </form>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- <script src="js/libs.min.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const phone = document.getElementById('phone');
+            var phoneMask = IMask(phone, {
+                mask: '+{38\\0}(00)000-00-00'
+
+            }).on('accept', function () {
+                phone.style.borderColor = 'red';
+                phone.parentElement.classList.remove('success');
+
+            }).on('complete', function () {
+                phone.style.borderColor = 'green';
+                phone.parentElement.classList.add('success');
+
+            });
+
+            phone.onblur = function () {
+                if (this.parentElement.classList.contains('success')) {
+                    this.parentElement.classList.remove('success');
+                }
+            };
+
+            const email = document.getElementById('eml');
+            const name = document.getElementById('name');
+            const message = document.getElementById('message');
+
+            email.addEventListener('input', inputEmail);
+            name.addEventListener('input', inputName);
+            message.addEventListener('input', inputMessage);
+
+            function inputEmail(e) {
+                const input = e.target.value;
+                if (input && /(^\w.*@\w+\.\w)/.test(input)) {
+                    email.style.borderColor = 'green';
+                    email.parentElement.classList.add('success');
+                    
+                } else {
+                    email.style.borderColor = 'red';
+                    email.parentElement.classList.remove('success');
+
+                }
+                this.onblur = function () {
+                    if (this.parentElement.classList.contains('success')) {
+                        this.parentElement.classList.remove('success');
+                    }
+                };
+            }
+            function inputName(e) {
+                const input = e.target.value;
+                if (input && /^[A-Za-zа-щА-ЩЬьЮюЯяЇїІіЄєҐґ]{3,}/.test(input)) {
+                    name.style.borderColor = 'green';
+                    name.parentElement.classList.add('success');
+                    
+                    
+                } else {
+                    name.style.borderColor = 'red';
+                    name.parentElement.classList.remove('success');
+                }
+                this.onblur = function () {
+                    if (this.parentElement.classList.contains('success')) {
+                        this.parentElement.classList.remove('success');
+                        
+                    }
+                };
+            };
+            function inputMessage(e) {
+                const input = e.target.value;
+                if (input && /^[A-Za-zа-щА-ЩЬьЮюЯяЇїІіЄєҐґ]{3,}/.test(input)) {
+                    message.style.borderColor = 'green';
+                    message.parentElement.classList.add('success');
+
+                } else {
+                    message.style.borderColor = 'red';
+                    message.parentElement.classList.remove('success');
+                }
+                this.onblur = function () {
+                    if (this.parentElement.classList.contains('success')) {
+                        this.parentElement.classList.remove('success');
+                        
+                    }
+                };
+                
+            };
+        });
+
+
+    </script> -->
+</body>
+
+</html>
