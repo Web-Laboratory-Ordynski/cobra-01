@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 1% 15%;
+    background-color: cadetblue;
+}
+
+.wrap {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flip-container {
+    perspective: 1000;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 100px;
+    height: 146px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    background-color: aquamarine;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #f9f1da;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.icon {
+    position: relative;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+}
+
+i {
+    transform: scale(3)
+}
+p {
+    margin: 0;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    transform: scale(3);
+    width: 20px;
+    height: 20px;
+}
+.svg {
+    position: relative;
+    transform: scale(3);
+}
