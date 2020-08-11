@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Miso";
+  src: url("../fonts/Miso.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Miso-light";
+  src: url("../fonts/Miso-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Miso-bold";
+  src: url("../fonts/Miso-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0 48px;
+}
+
+.cups {
+  background-color: #fdde7e;
+}
+.cups__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cups__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 0 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 42px 102px 36px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+.cups__item--active {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+.cups__price {
+  margin-bottom: 23px;
+  color: #02995b;
+  font-family: "Miso-Bold";
+  font-size: 70px;
+}
+.cups__price--active {
+  margin-bottom: 42px;
+}
+.cups__img {
+  margin-bottom: 37px;
+}
+.cups__img--active {
+  margin-bottom: 50px;
+}
+.cups__title {
+  margin-bottom: 40px;
+  color: #333333;
+  font-family: "Miso";
+  font-size: 56px;
+}
+.cups__descr {
+  color: #333333;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
