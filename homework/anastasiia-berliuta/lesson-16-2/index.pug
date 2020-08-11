@@ -1,0 +1,157 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Lesson-16
+        link(rel="stylesheet", href="style.css")
+    body 
+        div.page 
+            div.header.page__header
+                div.header__logo-container 
+                    p.header__logo Cahee
+                div.nav-menu.header__nav-items
+                    div.nav-menu__item
+                        p HOME
+                    div.nav-menu__item
+                        p ABOUT
+                    div.nav-menu__item
+                        p SERVICES
+                    div.nav-menu__item
+                        p GALLERY
+                    div.nav-menu__item
+                        p BLOG
+                    div.nav-menu__item
+                        p CONTACT
+            div.page__content_home
+                div.content__info
+                    div.info__title
+                        p.title Fresh Life
+                    div.info__article Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non elementum libero. Donec ac mauris eu lorem pretium facilisis. Donec.
+                    div.info__button
+                        p GET FREE NOW
+            div.page__content_about
+                div.content__image
+                    img(src="img/about.png")
+                div.content__info_about
+                    div.info__title_about
+                        p.title About Us
+                    div.info__article_about
+                        p.kek Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada, sapien id dictum dignissim, ante est pulvinar arcu, vel pharetra lectus sapien porta sem. Nulla vel pellentesque est. Mauris pellentesque est eu mi tristique ullamcorper.
+                        p.kek Vestibulum feugiat sem quis lectus finibus, ut iaculis lacus euismod. Cras varius a diam vitae accumsan. Phasellus posuere risus in urna luctus aliquet.
+        div.wrapper
+            div.services-blog
+                div.services-blog__menu
+                    ul.menu
+                        li.menu__item
+                            div.text-services Online Shopping
+                            div.icon__wrapper
+                                svg.icon
+                                    use(xlink:href="img/sprite.svg#shopping")
+                        li.menu__item
+                            div.text-services Quality Product
+                            div.icon__wrapper
+                                svg.icon
+                                    use(xlink:href="img/sprite.svg#product")
+                        li.menu__item
+                            div.text-services Domestic &#38;brInternational Delivery
+                            div.icon__wrapper
+                                svg.icon
+                                    use(xlink:href="img/sprite.svg#delivery")
+                        li.menu__item
+                            div.text-services Well Organized
+                            div.icon__wrapper
+                                svg.icon
+                                    use(xlink:href="img/sprite.svg#well")
+                div.services-blog__title
+                    p Our Services
+        div.gallery-wrapper
+            div.gallery
+                div.gallery__title
+                    div.title-gallery Gallery
+                    div.text-gallery Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                div.gallery__photos-container 
+                   div.gallery__photos
+                        div.gallery__photo.a 
+                            img.photo(src="img/a.jpg")
+                        div.gallery__photo.b 
+                            img.photo(src="img/b.jpg")
+                        div.gallery__photo.c 
+                            img.photo(src="img/c.jpg") 
+                        div.gallery__photo.d 
+                            img.photo(src="img/d.jpg")
+                        div.gallery__photo.e 
+                            img.photo(src="img/e.jpg")
+                div.gallery__button 
+                    button.button-gallery VIEW MORE
+        div.subscribe__wrapper 
+            div.subscribe__text 
+                div.title-subscribe Subscribe To Us
+                div.text-subscribe Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            div.subscribe__form 
+                form.subscribe-form 
+                    input.subscribe-form__input(type="email" id="email" size="30" required value="Your email address.")
+                    input.subscribe-form__submit(type="submit" value="Subscribe")
+        div.smothieblog 
+            header
+                div.blog
+                    img(src="img/blog.png")
+                div.text-smothie 
+                    p Proin dapibus neque sed congue sollicitudin. Etiam ac auctor mauris. Fusce vulputate tincidunt condimentum. Sed condimentum viverra felis vel ornare. Fusce aliquet lorem a quam sodales imperdiet eget et.
+            main
+                div.firstblog
+                    img.size(src="img/1bg.png")
+                    div.bg
+                    div.title
+                        img(src="img/green.svg")
+                    div.smallbg1
+                        img(src="img/smallbg.png")
+                        img.day(src="img/20.png")
+                        img.nov(src="img/nov.png")
+                div.secondblog
+                    img.size(src="img/2bg.png")
+                    div.bg
+                    div.title
+                        img(src="img/grow.svg")
+                    div.smallbg2
+                        img(src="img/smallbg.png")
+                        img.day(src="img/14.png")
+                        img.nov(src="img/nov.png")
+                div.thirdblog
+                    img.size(src="img/3bg.png")
+                    div.bg
+                    div.title
+                        img(src="img/pest.svg")
+                    div.smallbg3
+                        img(src="img/smallbg.png")
+                        img.day(src="img/10.png")
+                        img.nov(src="img/nov.png")
+            footer
+                div
+                    img.viewbg(src="img/bgv.png")
+                    img.view(src="img/view.png")
+        div.wrap
+            div.header-contact
+                div.header__titile Contact
+            div.main
+                div.main__form
+                    div.form
+                        div.form__area
+                            input.form__input(type="text" placeholder="Your name..")
+                        div.form__area
+                            input.form__input(type="email" placeholder="Your email..")
+                        div.form__area
+                            input.form__input(type="tel" placeholder="Your phone number..")
+                        div.form__area
+                            textarea.form__input.form__input--message(placeholder="Your message.." rows="5" cols="33")
+            div.footer-contact
+                div.footer__copyrights
+                    div.copyrights &#169; 2015 Company. All right reserved.
+                div.footer__logo
+                    div.logo
+                        svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="27px" text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="25px" x="0px" y="26.925px")
+                        tspan(font-size="25px" font-family="Pacifico" fill="#B9B9B9") Cahee
+                div.footer__author
+                    div.author Made with love by Auskteez
+
+        
