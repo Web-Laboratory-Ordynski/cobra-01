@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <link rel="stylesheet" href="/css/libs.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="contact section">
+        <div class="container">
+            <div class="contact__title title">Contact</div>
+            <div class="contact__sub-title title">For new projects, ideas, business or anything
+                you'd like to discuss, contact with me!</div>
+            <div class="contact__content">
+                <div class="contact__form">
+                    <form class="contact-form">
+
+                        <div class="contact-form__field-wrap" data-validate="Name is required">
+
+                            <input id="name" class="contact-form__input" type="text" name="name"
+                                placeholder="Your Name...">
+                            <!-- <span class="warning">✔</span> -->
+                        </div>
+
+                        <div class="contact-form__field-wrap" data-validate="Valid email is required: ex@abc.xyz">
+                            <input id="eml" class="contact-form__input" type="text" name="email"
+                                placeholder="Your Email...">
+
+                        </div>
+
+                        <div class="contact-form__field-wrap" data-validate="Phone is required">
+                            <input id="phone" class="contact-form__input" type="text" name="phone"
+                                placeholder="Your phone number...">
+
+                        </div>
+
+                        <div class="contact-form__field-wrap contact-form__field-wrap--text"
+                            data-validate="Message is required">
+                            <textarea id="message" class="contact-form__text contact-form__input" name="message"
+                                placeholder="Your message..."></textarea>
+
+                        </div>
+
+                        <!-- <div class="">
+                <button class="">
+                    <span>
+                        Send Email
+                        <i class=""></i>
+                    </span>
+                </button>
+            </div> -->
+                    </form>
+                </div>
+                <div class="contact__address">
+                    <div class="contact__address-item">
+                        <div class="contact__address-title">ADDRESS</div>
+                        <address class="address__text">123 City name, Street, City, Country</address>
+                    </div>
+                    <div class="contact__address-item">
+                        <div class="contact__address-title">EMAIL</div>
+                        <a href="mailto:cahee@domain.com">cahee@domain.com</a>
+                    </div>
+                    <div class="contact__address-item">
+                        <div class="contact__address-title">PHONE</div>
+                        <a href="tel:+0123456789">+012 345 6789</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__item">
+                    <div class="footer__copy">© 2015 Company. All right reserved.</div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__logo">
+                        <img src="img/logo.png" alt="" class="footer__sm-logo">
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__made">Made with <span>love</span> by Auskteez</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/libs.min.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const phone = document.getElementById('phone');
+            var phoneMask = IMask(phone, {
+                mask: '+{38\\0}(00)000-00-00'
+
+            }).on('accept', function () {
+                phone.style.borderColor = 'red';
+                phone.parentElement.classList.remove('success');
+
+            }).on('complete', function () {
+                phone.style.borderColor = 'green';
+                phone.parentElement.classList.add('success');
+
+            });
+
+            phone.onblur = function () {
+                if (this.parentElement.classList.contains('success')) {
+                    this.parentElement.classList.remove('success');
+                }
+            };
+
+            const email = document.getElementById('eml');
+            const name = document.getElementById('name');
+            const message = document.getElementById('message');
+
+            email.addEventListener('input', inputEmail);
+            name.addEventListener('input', inputName);
+            message.addEventListener('input', inputMessage);
+
+            function inputEmail(e) {
+                const input = e.target.value;
+                if (input && /(^\w.*@\w+\.\w)/.test(input)) {
+                    email.style.borderColor = 'green';
+                    email.parentElement.classList.add('success');
+                    
+                } else {
+                    email.style.borderColor = 'red';
+                    email.parentElement.classList.remove('success');
+
+                }
+                this.onblur = function () {
+                    if (this.parentElement.classList.contains('success')) {
+                        this.parentElement.classList.remove('success');
+                    }
+                };
+            }
+            function inputName(e) {
+                const input = e.target.value;
+                if (input && /^[A-Za-zа-щА-ЩЬьЮюЯяЇїІіЄєҐґ]{3,}/.test(input)) {
+                    name.style.borderColor = 'green';
+                    name.parentElement.classList.add('success');
+                    
+                    
+                } else {
+                    name.style.borderColor = 'red';
+                    name.parentElement.classList.remove('success');
+                }
+                this.onblur = function () {
+                    if (this.parentElement.classList.contains('success')) {
+                        this.parentElement.classList.remove('success');
+                        
+                    }
+                };
+            };
+            function inputMessage(e) {
+                const input = e.target.value;
+                if (input && /^[A-Za-zа-щА-ЩЬьЮюЯяЇїІіЄєҐґ]{3,}/.test(input)) {
+                    message.style.borderColor = 'green';
+                    message.parentElement.classList.add('success');
+
+                } else {
+                    message.style.borderColor = 'red';
+                    message.parentElement.classList.remove('success');
+                }
+                this.onblur = function () {
+                    if (this.parentElement.classList.contains('success')) {
+                        this.parentElement.classList.remove('success');
+                        
+                    }
+                };
+                
+            };
+        });
+
+
+    </script>
+</body>
+
+</html>
