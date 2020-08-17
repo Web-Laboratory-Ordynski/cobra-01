@@ -1,0 +1,134 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+.home-background{
+    text-align: center;
+    height: 100vh;
+
+
+}
+@media (min-width: 10px) {
+    .home-background {
+   background: url(images/home-bg-375.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+}
+@media (min-width: 350px) {
+    .home-background {
+   background: url(images/home-bg-375.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+}
+@media (min-width: 576px) {
+     .home-background {
+    background: url(images/home-bg-800.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ }
+@media (min-width: 768px) { 
+    .home-background {
+    background: url(images/home-bg-960.png);
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+}
+@media (min-width: 992px) { 
+    .home-background {
+    background: url(images/home-bg-1000.png);
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+}
+@media (min-width: 1200px) { 
+    .home-background {
+    background: url(images/home-bg-1500.png);
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+}
+@media (min-width: 1500px) { 
+    .home-background {
+    background: url(images/home-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+}
+
+.burger-focused{
+    &:focus{
+    outline-color: #788298}
+}
+.home-content{
+    height: 100vh;
+    position: relative;
+}
+.scroll-icon{
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+}
+.scroll-icon-mouse{
+    opacity: 1;
+}
+.scroll-icon-arrow{
+    opacity: 0;
+}
+@media screen and (max-width: 1200px) {
+    .scroll-icon-mouse{
+        opacity: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    .scroll-icon-arrow{
+        opacity: 1;
+    }
+   
+  }
+
+.text{
+    max-width: 450px ;
+}
+.title{
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 35px;
+}
+.services-background{
+    background: url(images/services.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.services-title{
+    font-weight: 700;
+}
+.item-portfolio{
+    height: 200px;
+    position: relative;
+    width: 100%;
+  
+  object-fit: cover;
+  &:hover{
+      transform: scale(1.05);;
+      filter: brightness(1.3) contrast(1.2);
+      
+      
+  }
+
+}
+.img-port{
+    width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.item-text{
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
