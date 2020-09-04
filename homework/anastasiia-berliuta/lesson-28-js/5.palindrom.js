@@ -1,10 +1,10 @@
 // Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 
 function isItPal(userInput) {
-    var result = "------please enter any number from 10000 to 99999------";
+    var result = "please enter any number from 10000 to 99999";
     if (userInput.length == 5) {
       if (isNaN(Number(userInput))) {
-        result = "------it is not a number :(------";
+        result = "it is not a number :(";
       } else {
         Array.from(userInput);
         var a = userInput[0];
@@ -13,9 +13,9 @@ function isItPal(userInput) {
         var d = userInput[3];
         var e = userInput[4];
         if (a == e && b == d){
-            result = console.log("------There is a palindrom :)------")
+            result = console.log("There is a palindrom :)")
         } else 
-        result = console.log("------There is not a palindrom :(------")
+        result = console.log("There is not a palindrom :(")
     }
       return result;
     } 

@@ -24,5 +24,3 @@ userDate.setDate(userDate.getDate() + 1);
 var nextUserDate = userDate;
 
 console.log("your date is " + userInput + " and the next date is " + userDate);
-
-//почему то определяет месяца не с нуля

@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 });
 
 rl.question("What is your sum ? ", function(sum) {
-    rl.question("Choose currency to convert: EUR, UAH, AZN: ----", function(currency) {
+    rl.question("Choose currency to convert: EUR, UAH, AZN: ", function(currency) {
         if (currency == "EUR"){
             var newSum = Number(sum)*0.84;
         } else if (currency == "UAH"){
@@ -18,7 +18,7 @@ rl.question("What is your sum ? ", function(sum) {
        } else {
         result = console.log("please choose your currency")
        }
-        console.log(`-----You have ${sum} USD, it is ${newSum} ${currency}-----`);
+        console.log(`You have ${sum} USD, it is ${newSum} ${currency}`);
         rl.close();
     });
 });

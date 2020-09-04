@@ -6,9 +6,9 @@ function isInteger(num) {
   }
 
 function ifItIsLeapyear(yourYear) {
-    var result = "------введите любой год на проверку------";
+    var result = "введите любой год на проверку";
       if (isNaN(Number(yourYear))) {
-        result = "------НЕ ЧИСЛО :(------";
+        result = "НЕ ЧИСЛО :(";
       }  else {
         var firstCheck = yourYear/1e2;
         firstCheck = isInteger(firstCheck);

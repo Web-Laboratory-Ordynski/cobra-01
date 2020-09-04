@@ -22,7 +22,5 @@ function getAgeCategoryByNumber(age) {
   var userAge = args[2];
   userAge = Number(userAge);
   
-  console.log('Введено: ', userAge);
-  console.log('---------------');
   var ageCategoryString = getAgeCategoryByNumber(userAge);
   console.log('Вы: ', ageCategoryString);
