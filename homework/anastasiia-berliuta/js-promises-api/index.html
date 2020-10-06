@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐶 DOGS API 🐶</title>
+  </head>
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"
+      integrity="sha512-LJaxxgpiq7SihGQ21nejROsll6FRrgbs0Wxtgqb5x+Q0CJICA3vt8hlBxSD8NLsO+Yabgg3B7ARexiijKiojGg=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      console.log(
+        "%c 🐶 DOGS APP STARTED!",
+        "color: green; font-weight: bold;"
+      );
+
+
+
+      var apiPromise = new Promise( function(res,rej){
+          var dogsInfo = superagent.get('https://api.thedogapi.com/v1/breeds');
+          res(dogsInfo);
+      }); 
+               
+      var shomMeDogsString = function(){
+         apiPromise
+          .then(function(res){
+            var dogs = res.body;
+            var dogsString = res.body
+            .map(dog=>dog.name)
+            .reduce(function (acc, currBreed) {
+                      var firstChar = currBreed.charAt(0).toUpperCase();
+
+                      if (acc[firstChar]) {
+                        if (acc[firstChar].length < 2) {
+                          acc[firstChar].push(currBreed);
+                        }
+                      } else {
+                        acc[firstChar] = [];
+                        acc[firstChar].push(currBreed);
+                      }
+
+                      return acc;
+                  }, {});
+
+              dogsString = Object.keys(dogsString).reduce(function(acc, currChar) {
+                return acc + currChar + ': ' + dogsString[currChar].join(', ') + '\n';
+              }, '');
+
+            console.log(dogsString);
+            alert(dogsString);
+
+            var choosedBreed = prompt('Choose your breed please: ', 'Vizsla');
+
+            var temp = dogs.findIndex(obj=>obj.name == choosedBreed);
+            var dogId = dogs[temp].id;
+            
+            return dogId;
+          })
+          .then(function(dogId){
+            superagent.get('https://api.thedogapi.com/v1/images/search?include_breed=1&breed_id='+`${dogId}`)
+              .then(function(res){
+                var  dogsBreedAbout = [];
+
+                var tempBreedInfo = res.body[0].breeds
+                .map(function(obj){
+                for (const [key, value] of Object.entries(obj)) {
+                  dogsBreedAbout.push(`${key}: ${JSON.stringify(value)}`)
+                  }});
+
+                alert(dogsBreedAbout.join("\n"));
+              })
+          })
+          .then((res)=>
+            console.log(
+            "%c 🐶 SYNC CODE FINISHED!",
+            "color: green; font-weight: bold;"
+            ))
+          .catch(err=>
+            console.log('ERROR')
+          );              
+        };
+
+        shomMeDogsString();
+
+    </script>
+  </body>
+</html>
