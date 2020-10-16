@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding-top: 5%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .list {
+            padding: 2%;
+            width: 40%;
+            background-color: antiquewhite;
+        }
+
+        li:hover {
+            cursor: pointer;
+            color: rgb(214, 170, 89);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list" id="song__list"></div>
+
+    <script>
+        var playList = [{
+                author: "QUEEN",
+                song: "BOHEMIAN RHAPSODY"
+            },
+            {
+                author: "LYNYRD SKYNYRD",
+                song: "FREE BIRD"
+            },
+            {
+                author: "DEEP PURPLE",
+                song: "SMOKE ON THE WATER"
+            },
+            {
+                author: "JIMI HENDRIX",
+                song: "ALL ALONG THE WATCHTOWER"
+            },
+            {
+                author: "AC/DC",
+                song: "BACK IN BLACK"
+            },
+            {
+                author: "QUEEN",
+                song: "WE WILL ROCK YOU"
+            },
+            {
+                author: "METALLICA",
+                song: "ENTER SANDMAN"
+            }
+        ];
+        const listContainer = document.createElement('ol');
+        const songList = document.getElementById('song__list');
+
+        playList.forEach((obj) => {
+            const liSong = document.createElement('li');
+            liSong.innerText = "Author: " + obj.author + ", song: " + obj.song;
+            listContainer.appendChild(liSong);
+        });
+
+        songList.appendChild(listContainer);
+    </script>
+</body>
+
+</html>

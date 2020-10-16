@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🐶 DOGS API 🐶</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding-top: 2%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .list {
+      padding: 2%;
+      width: 40%;
+      background-color: antiquewhite;
+    }
+
+    li:hover {
+      cursor: pointer;
+      color: rgb(214, 170, 89);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class='list' id='dog__list'></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"
+    integrity="sha512-LJaxxgpiq7SihGQ21nejROsll6FRrgbs0Wxtgqb5x+Q0CJICA3vt8hlBxSD8NLsO+Yabgg3B7ARexiijKiojGg=="
+    crossorigin="anonymous"></script>
+  <script>
+    console.log(
+      "%c 🐶 DOGS APP STARTED!",
+      "color: green; font-weight: bold;"
+    );
+
+
+    var apiPromise = new Promise(function (res, rej) {
+      var dogsInfo = superagent.get('https://api.thedogapi.com/v1/breeds');
+      res(dogsInfo);
+    });
+
+    var shomMeDogsString = function () {
+      apiPromise
+        .then(function (res) {
+          var dogs = res.body;
+          var dogsString = res.body
+            .map(dog => dog.name)
+            .reduce(function (acc, currBreed) {
+              var firstChar = currBreed.charAt(0).toUpperCase();
+
+              if (acc[firstChar]) {
+                if (acc[firstChar].length < 2) {
+                  acc[firstChar].push(currBreed);
+                }
+              } else {
+                acc[firstChar] = [];
+                acc[firstChar].push(currBreed);
+              }
+
+              return acc;
+            }, {});
+
+          dogsString = Object.keys(dogsString).reduce(function (acc, currChar) {
+            return acc + currChar + ': ' + dogsString[currChar].join(', ') + '\n';
+          }, '');
+          console.log(dogsString);
+
+
+          const listContainer = document.createElement('ol');
+          const dogList = document.getElementById('dog__list');
+
+          var dogListArray = dogsString.split("\n")
+            .forEach((str) => {
+              let liDog = document.createElement('li');
+              liDog.innerHTML = str;
+              listContainer.appendChild(liDog);
+            });
+
+          dog__list.append(listContainer)
+        })
+
+        .then((res) =>
+          console.log(
+            "%c 🐶 SYNC CODE FINISHED!",
+            "color: green; font-weight: bold;"
+          ))
+        .catch(err =>
+          console.log('ERROR')
+        );
+    };
+
+    shomMeDogsString();
+  </script>
+</body>
+
+</html>
